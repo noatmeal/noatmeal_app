@@ -23,7 +23,11 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <div className="h-screen grid justify-items-center font-roboto">
+              <div className="max-w-[80ch]">
+                {children}
+              </div>
+            </div>
             <Analytics />
             <SpeedInsights />
           </ThemeProvider>
