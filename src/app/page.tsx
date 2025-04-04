@@ -1,29 +1,10 @@
-import { ModeToggle } from "@/components/light-dark-toggle"
+import { Navigation } from "@/components/navigation"
 
 export default function Home() {
   return (
     <div>
       <h1> A Bowl of Noatmeal </h1>
-        
-      <div className="mb-8">
-        <h3>Site</h3>
-        <nav className="flex items-center gap-4 mb-4">
-          <a href="#">Home</a>
-          <a href="#">Blog</a>
-          <a href="#">Projects</a>
-          <a href="#">About</a>
-          <a href="#">Archive</a>
-          <ModeToggle />
-        </nav>
-
-        <h3>Page</h3>
-        <nav className="flex items-center gap-4">
-          <a href="#">Top</a>
-          <a href="#">Comments</a>
-          <a href="#">Share</a>
-          <a href="#">Print</a>
-        </nav>
-      </div>
+      <Navigation />
       
       <h1>Greetings!</h1>
       
