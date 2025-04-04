@@ -9,9 +9,7 @@ export default function Home() {
         <a href="#" className="hover:underline">Blog</a>
         <a href="#" className="hover:underline">Projects</a>
         <a href="#" className="hover:underline">About</a>
-        <div className="ml-auto">
-          <ModeToggle />
-        </div>
+        <ModeToggle />
       </nav>
       
       <h2>Greetings!</h2>
