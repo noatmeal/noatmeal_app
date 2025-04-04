@@ -9,9 +9,9 @@ export default function Home() {
       <h1>Greetings!</h1>
       
       <p>
-        I'm Noatmeal and this is my blog. My goal is to mostly write about 
+        I&apos;m Noatmeal and this is my blog. My goal is to mostly write about 
         computer science, programming, and mathematics, but life has a way of 
-        being distracting and so I'm bound to write about other things here and 
+        being distracting and so I&apos;m bound to write about other things here and 
         there. 
       </p>
      
@@ -21,11 +21,11 @@ export default function Home() {
       </p>
        
       <p>
-        I mostly use social media as a way to advertise what I'm doing here. So 
-        I likely won't respond to any social media accounts you see by me in the 
-        wild and would prefer that you just email me. However, if you're aware 
-        of any interesting discussions that you'd like me to see or want me to 
-        weigh in on, let me know and I'll take a look! 
+        I mostly use social media as a way to advertise what I&apos;m doing here. So 
+        I likely won&apos;t respond to any social media accounts you see by me in the 
+        wild and would prefer that you just email me. However, if you&apos;re aware 
+        of any interesting discussions that you&apos;d like me to see or want me to 
+        weigh in on, let me know and I&apos;ll take a look! 
       </p>
     </div>
   );
