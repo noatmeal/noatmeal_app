@@ -60,4 +60,8 @@
   p {
     @apply mb-4;
   }
+
+  a {
+    @apply underline;
+  }
 }
