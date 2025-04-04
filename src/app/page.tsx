@@ -5,12 +5,25 @@ export default function Home() {
     <div>
       <h1> A Bowl of Noatmeal </h1>
         
-      <nav className="flex items-center gap-4 mb-8">
-        <a href="#" className="hover:underline">Blog</a>
-        <a href="#" className="hover:underline">Projects</a>
-        <a href="#" className="hover:underline">About</a>
-        <ModeToggle />
-      </nav>
+      <div className="mb-8">
+        <h3 className="text-lg mb-2">Site</h3>
+        <nav className="flex items-center gap-4 mb-4">
+          <a href="#" className="hover:underline">Home</a>
+          <a href="#" className="hover:underline">Blog</a>
+          <a href="#" className="hover:underline">Projects</a>
+          <a href="#" className="hover:underline">About</a>
+          <a href="#" className="hover:underline">Archive</a>
+          <ModeToggle />
+        </nav>
+
+        <h3 className="text-lg mb-2">Page</h3>
+        <nav className="flex items-center gap-4">
+          <a href="#" className="hover:underline">Top</a>
+          <a href="#" className="hover:underline">Comments</a>
+          <a href="#" className="hover:underline">Share</a>
+          <a href="#" className="hover:underline">Print</a>
+        </nav>
+      </div>
       
       <h2>Greetings!</h2>
       
