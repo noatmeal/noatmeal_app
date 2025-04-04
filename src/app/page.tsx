@@ -3,7 +3,8 @@ import { ModeToggle } from "@/components/light-dark-toggle"
 export default function Home() {
   return (
     <div className="space-y-8">
-      <div className="flex justify-end">
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-bold">Noatmeal's Blog</h1>
         <ModeToggle />
       </div>
       
