@@ -56,4 +56,8 @@
   h6 {
     @apply text-base font-medium mb-2;
   }
+
+  p {
+    @apply mb-4;
+  }
 }
