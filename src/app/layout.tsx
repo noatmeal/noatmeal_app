@@ -8,8 +8,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <ThemeProvider
+      <body className="min-h-screen">
+        <div className="mx-auto max-w-[80ch] px-4 py-8">
+          <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
@@ -17,6 +18,7 @@ export default function RootLayout({
         > 
           {children}
         </ThemeProvider>
+        </div>
       </body>
     </html>
   );
