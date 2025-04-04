@@ -5,7 +5,14 @@ export default function Home() {
     <div>
       <h1> A Bowl of Noatmeal </h1>
         
-      <ModeToggle />
+      <nav className="flex items-center gap-4 mb-8">
+        <a href="#" className="hover:underline">Blog</a>
+        <a href="#" className="hover:underline">Projects</a>
+        <a href="#" className="hover:underline">About</a>
+        <div className="ml-auto">
+          <ModeToggle />
+        </div>
+      </nav>
       
       <h2>Greetings!</h2>
       
