@@ -18,9 +18,9 @@ async function getPostMetadata(
   filename: string,
 ): Promise<BlogPostMetadata | null> {
   const slug = path.basename(filename, ".yaml");
-  const filePath = path.join(process.cwd(), BLOG_CONTENT_DIR, filename);
+  const relativeFilePath = path.join(BLOG_CONTENT_DIR, filename); // Use relative path
   try {
-    const content = await getYamlContent(filePath);
+    const content = await getYamlContent(relativeFilePath); // Pass relative path
     // Basic validation
     if (
       typeof content.title === "string" &&
