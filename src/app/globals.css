@@ -1,27 +1,29 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'BigBlueTerminal';
-  src: url('../fonts/BigBlueTerminal/SmallBigBlueTermPlusNerdFontMono-Regular.ttf') format('truetype');
+  font-family: "BigBlueTerminal";
+  src: url("../fonts/BigBlueTerminal/SmallBigBlueTermPlusNerdFontMono-Regular.ttf")
+    format("truetype");
 }
 
 @font-face {
-  font-family: 'RobotoMono';
-  src: url('../fonts/RobotoMono/SmallRobotoMonoNerdFontMono-Regular.ttf') format('truetype');
+  font-family: "RobotoMono";
+  src: url("../fonts/RobotoMono/SmallRobotoMonoNerdFontMono-Regular.ttf")
+    format("truetype");
 }
 
 :root {
   --background: #ffffff;
   --foreground: #000000;
   --border: #000000;
-  font-family: 'RobotoMono', monospace;
+  font-family: "RobotoMono", monospace;
 }
 
 .dark {
   --background: #000000;
   --foreground: #ffffff;
   --border: #ffffff;
-  font-family: 'BigBlueTerminal', monospace;
+  font-family: "BigBlueTerminal", monospace;
 }
 
 @layer base {

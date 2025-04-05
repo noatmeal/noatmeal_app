@@ -1,4 +1,4 @@
-import { ModeToggle } from "./light-dark-toggle"
+import { ModeToggle } from "./light-dark-toggle";
 
 export function Navigation() {
   return (
@@ -21,5 +21,5 @@ export function Navigation() {
         <a href="#">Print</a>
       </nav>
     </div>
-  )
+  );
 }

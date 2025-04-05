@@ -1,5 +1,5 @@
-import { ThemeProvider } from "@/components/theme-provider"
-import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider";
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -11,13 +11,13 @@ export default function RootLayout({
       <body className="min-h-screen">
         <div className="mx-auto max-w-[80ch] px-4 py-8">
           <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        > 
-          {children}
-        </ThemeProvider>
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </div>
       </body>
     </html>
