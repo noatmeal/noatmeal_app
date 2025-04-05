@@ -1,8 +1,7 @@
 import { ModeToggle } from "./light-dark-toggle";
 import { getYamlContent } from "@/lib/yaml-loader";
 
-// TODO: Replace with your actual repo URL
-const GITHUB_REPO_URL = "https://github.com/username/repo/blob/main/";
+const GITHUB_REPO_URL = "https://github.com/noatmeal/noatmeal_app/blob/main/";
 const HEADER_CONTENT_FILENAME = "src/content/header.yaml";
 
 interface HeaderProps {
@@ -22,8 +21,12 @@ export async function Header({ pageContentFilename }: HeaderProps) {
           <a href="#">{content.siteLinks.projects}</a>
           <a href="#">{content.siteLinks.about}</a>
           <a href="#">{content.siteLinks.archive}</a>
-          <a href={GITHUB_REPO_URL + HEADER_CONTENT_FILENAME} target="_blank" rel="noopener noreferrer">
-            {content.siteLinks.editOnGithub}
+          <a
+            href={GITHUB_REPO_URL + HEADER_CONTENT_FILENAME}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {content.siteLinks.source}
           </a>
           <ModeToggle />
         </nav>
@@ -34,8 +37,12 @@ export async function Header({ pageContentFilename }: HeaderProps) {
           <a href="#">{content.pageLinks.comments}</a>
           <a href="#">{content.pageLinks.share}</a>
           <a href="#">{content.pageLinks.print}</a>
-          <a href={GITHUB_REPO_URL + pageContentFilename} target="_blank" rel="noopener noreferrer">
-            {content.pageLinks.editOnGithub}
+          <a
+            href={GITHUB_REPO_URL + pageContentFilename}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {content.pageLinks.source}
           </a>
         </nav>
       </div>
