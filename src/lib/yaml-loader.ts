@@ -31,3 +31,59 @@ export async function getSlugsFromDirectory(
     return [];
   }
 }
+
+// Interface for Blog Post Metadata (used by getAllPostsMetadata)
+export interface BlogPostMetadata {
+  title: string;
+  date: string; // YYYY-MM-DD
+  slug: string;
+}
+
+/**
+ * Reads a directory, parses YAML files, validates metadata, and returns metadata for all posts.
+ * @param directoryPath - The path to the directory containing blog post YAML files, relative to the project root.
+ * @returns A promise that resolves to an array of BlogPostMetadata objects.
+ */
+export async function getAllPostsMetadata(
+  directoryPath: string,
+): Promise<BlogPostMetadata[]> {
+  const absolutePath = path.join(process.cwd(), directoryPath);
+  let filenames: string[];
+
+  try {
+    filenames = await fs.readdir(absolutePath);
+  } catch (error) {
+    console.error(`Error reading directory for posts at ${directoryPath}:`, error);
+    return []; // Return empty if directory doesn't exist or error occurs
+  }
+
+  const yamlFilenames = filenames.filter((fn) => fn.endsWith(".yaml"));
+  const postsMetadata: BlogPostMetadata[] = [];
+
+  for (const filename of yamlFilenames) {
+    const slug = path.basename(filename, ".yaml");
+    const relativeFilePath = path.join(directoryPath, filename);
+    try {
+      const content = await getYamlContent(relativeFilePath);
+      // Basic validation
+      if (
+        content &&
+        typeof content.title === "string" &&
+        typeof content.date === "string" &&
+        /^\d{4}-\d{2}-\d{2}$/.test(content.date) // Validate date format
+      ) {
+        postsMetadata.push({
+          title: content.title,
+          date: content.date,
+          slug: slug,
+        });
+      } else {
+        console.warn(`Invalid or missing metadata in ${filename}`);
+      }
+    } catch (error) {
+      console.error(`Error processing ${filename}:`, error);
+    }
+  }
+
+  return postsMetadata;
+}
