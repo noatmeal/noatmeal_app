@@ -18,7 +18,7 @@ interface BlogPageProps {
 }
 
 // Function to generate static paths for all blog posts
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<Array<{ slug: string }>> { // Add explicit return type
   const slugs = await getSlugsFromDirectory(BLOG_CONTENT_DIR);
   return slugs.map((slug) => ({
     slug: slug,
