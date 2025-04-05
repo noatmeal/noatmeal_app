@@ -18,8 +18,6 @@ interface HeaderContent {
   };
   pageLinks: {
     navAreaName: string;
-    top: LinkItem;
-    print: LinkItem;
     source: LinkItem; // href constructed dynamically
   };
 }
@@ -55,10 +53,6 @@ export async function Header({ pageContentFilename }: HeaderProps) {
 
         <h3>{content.pageLinks.navAreaName}</h3>
         <nav className="flex items-center gap-4">
-          <a href={content.pageLinks.top.href}>{content.pageLinks.top.text}</a>
-          <a href={content.pageLinks.print.href}>
-            {content.pageLinks.print.text}
-          </a>
           <a href={pageSourceUrl} target="_blank" rel="noopener noreferrer">
             {content.pageLinks.source.text}
           </a>
