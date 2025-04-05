@@ -1,6 +1,5 @@
 import { Header } from "@/components/header";
-import { getYamlContent } from '@/lib/yaml-loader'
-
+import { getYamlContent } from "@/lib/yaml-loader";
 
 export default async function Home() {
   const content = await getYamlContent("src/content/home.yaml");

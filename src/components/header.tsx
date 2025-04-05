@@ -1,8 +1,8 @@
 import { ModeToggle } from "./light-dark-toggle";
-import { getYamlContent } from '@/lib/yaml-loader'
+import { getYamlContent } from "@/lib/yaml-loader";
 
 export async function Header() {
-  const content = await getYamlContent("src/content/header.yaml"); 
+  const content = await getYamlContent("src/content/header.yaml");
   return (
     <>
       <h1>{content.title}</h1>
