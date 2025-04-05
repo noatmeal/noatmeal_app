@@ -18,7 +18,12 @@ export function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <span className="cursor-pointer underline">Themes</span>
+        <button
+          type="button"
+          className="underline focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+        >
+          Themes
+        </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
