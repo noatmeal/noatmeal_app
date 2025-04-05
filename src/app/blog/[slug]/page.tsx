@@ -1,7 +1,6 @@
 import { Header } from "@/components/header";
-import { getYamlContent } from "@/lib/yaml-loader";
-import fs from "fs/promises";
-import path from "path";
+import { getYamlContent, getSlugsFromDirectory } from "@/lib/yaml-loader"; // Import new function
+import path from "path"; // fs is no longer needed here
 import { notFound } from "next/navigation";
 
 const BLOG_CONTENT_DIR = "src/content/blog";
@@ -20,21 +19,10 @@ interface BlogPageProps {
 
 // Function to generate static paths for all blog posts
 export async function generateStaticParams() {
-  try {
-    const filenames = await fs.readdir(
-      path.join(process.cwd(), BLOG_CONTENT_DIR),
-    );
-    const yamlFilenames = filenames.filter((fn) => fn.endsWith(".yaml"));
-    return yamlFilenames.map((filename) => ({
-      slug: path.basename(filename, ".yaml"),
-    }));
-  } catch (error) {
-    console.error(
-      "Error reading blog content directory for static params:",
-      error,
-    );
-    return []; // Return empty array if directory doesn't exist or error occurs
-  }
+  const slugs = await getSlugsFromDirectory(BLOG_CONTENT_DIR);
+  return slugs.map((slug) => ({
+    slug: slug,
+  }));
 }
 
 // Fetch content for a specific blog post
