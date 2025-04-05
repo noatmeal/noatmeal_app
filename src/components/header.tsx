@@ -1,8 +1,16 @@
 import { ModeToggle } from "./light-dark-toggle";
 import { getYamlContent } from "@/lib/yaml-loader";
 
-export async function Header() {
-  const content = await getYamlContent("src/content/header.yaml");
+// TODO: Replace with your actual repo URL
+const GITHUB_REPO_URL = "https://github.com/username/repo/blob/main/";
+const HEADER_CONTENT_FILENAME = "src/content/header.yaml";
+
+interface HeaderProps {
+  pageContentFilename: string;
+}
+
+export async function Header({ pageContentFilename }: HeaderProps) {
+  const content = await getYamlContent(HEADER_CONTENT_FILENAME);
   return (
     <>
       <h1>{content.title}</h1>
@@ -14,6 +22,9 @@ export async function Header() {
           <a href="#">{content.siteLinks.projects}</a>
           <a href="#">{content.siteLinks.about}</a>
           <a href="#">{content.siteLinks.archive}</a>
+          <a href={GITHUB_REPO_URL + HEADER_CONTENT_FILENAME} target="_blank" rel="noopener noreferrer">
+            {content.siteLinks.editOnGithub}
+          </a>
           <ModeToggle />
         </nav>
 
@@ -23,6 +34,9 @@ export async function Header() {
           <a href="#">{content.pageLinks.comments}</a>
           <a href="#">{content.pageLinks.share}</a>
           <a href="#">{content.pageLinks.print}</a>
+          <a href={GITHUB_REPO_URL + pageContentFilename} target="_blank" rel="noopener noreferrer">
+            {content.pageLinks.editOnGithub}
+          </a>
         </nav>
       </div>
     </>
