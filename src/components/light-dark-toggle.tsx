@@ -18,7 +18,7 @@ export function ModeToggle() {
       <DropdownMenuTrigger asChild>
         <button
           type="button"
-          className="underline focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+          className="underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
         >
           Themes
         </button>
