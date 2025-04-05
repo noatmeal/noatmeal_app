@@ -6,11 +6,11 @@ siteLinks:
   projects: "Projects"
   about: "About"
   archive: "Archive"
-  editOnGithub: "Edit on GitHub"
+  source: "Source"
 pageLinks:
   navAreaName: "Page"
   top: "Top"
   comments: "Comments"
   share: "Share"
   print: "Print"
-  editOnGithub: "Edit on GitHub"
+  source: "Source"
