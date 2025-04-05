@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import * as React from "react";
 import { useTheme } from "next-themes";
 
@@ -31,19 +29,19 @@ export function ModeToggle() {
       >
         <DropdownMenuItem
           onClick={() => setTheme("light")}
-          className="hover:underline cursor-pointer"
+          className="hover:underline cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           Light
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("dark")}
-          className="hover:underline cursor-pointer"
+          className="hover:underline cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("system")}
-          className="hover:underline cursor-pointer"
+          className="hover:underline cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           System
         </DropdownMenuItem>
