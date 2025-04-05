@@ -8,15 +8,8 @@ siteLinks:
     href: "/"
   source:
     text: "Source"
-    # href is constructed dynamically in the component
 pageLinks:
   navAreaName: "Page"
-  top:
-    text: "Top"
-    href: "#" # Standard anchor link
-  print:
-    text: "Print"
-    href: "javascript:window.print()" # Standard print JS
   source:
     text: "Source"
     # href is constructed dynamically in the component
