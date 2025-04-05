@@ -32,6 +32,8 @@ interface HeaderContent {
 
 interface HeaderProps {
   pageContentFilename: string; // Filename for the current page's content
+}
+
 export async function Header({ pageContentFilename }: HeaderProps) {
   // Load header content, explicitly casting to the defined type
   const content = (await getYamlContent(
@@ -48,12 +50,18 @@ export async function Header({ pageContentFilename }: HeaderProps) {
       <div className="mb-8">
         <h3>{content.siteLinks.navAreaName}</h3>
         <nav className="flex items-center gap-4 mb-4">
-          <a href={content.siteLinks.home.href}>{content.siteLinks.home.text}</a>
-          <a href={content.siteLinks.blog.href}>{content.siteLinks.blog.text}</a>
+          <a href={content.siteLinks.home.href}>
+            {content.siteLinks.home.text}
+          </a>
+          <a href={content.siteLinks.blog.href}>
+            {content.siteLinks.blog.text}
+          </a>
           <a href={content.siteLinks.projects.href}>
             {content.siteLinks.projects.text}
           </a>
-          <a href={content.siteLinks.about.href}>{content.siteLinks.about.text}</a>
+          <a href={content.siteLinks.about.href}>
+            {content.siteLinks.about.text}
+          </a>
           <a href={content.siteLinks.archive.href}>
             {content.siteLinks.archive.text}
           </a>
@@ -69,8 +77,12 @@ export async function Header({ pageContentFilename }: HeaderProps) {
           <a href={content.pageLinks.comments.href}>
             {content.pageLinks.comments.text}
           </a>
-          <a href={content.pageLinks.share.href}>{content.pageLinks.share.text}</a>
-          <a href={content.pageLinks.print.href}>{content.pageLinks.print.text}</a>
+          <a href={content.pageLinks.share.href}>
+            {content.pageLinks.share.text}
+          </a>
+          <a href={content.pageLinks.print.href}>
+            {content.pageLinks.print.text}
+          </a>
           <a href={pageSourceUrl} target="_blank" rel="noopener noreferrer">
             {content.pageLinks.source.text}
           </a>
