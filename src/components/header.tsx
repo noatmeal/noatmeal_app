@@ -14,6 +14,7 @@ interface HeaderContent {
   siteLinks: {
     navAreaName: string;
     home: LinkItem;
+    blog: LinkItem;
     source: LinkItem; // href constructed dynamically
   };
   pageLinks: {
@@ -44,6 +45,9 @@ export async function Header({ pageContentFilename }: HeaderProps) {
         <nav className="flex items-center gap-4 mb-4">
           <a href={content.siteLinks.home.href}>
             {content.siteLinks.home.text}
+          </a>
+          <a href={content.siteLinks.blog.href}>
+            {content.siteLinks.blog.text}
           </a>
           <a href={headerSourceUrl} target="_blank" rel="noopener noreferrer">
             {content.siteLinks.source.text}

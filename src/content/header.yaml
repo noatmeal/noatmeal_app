@@ -6,6 +6,9 @@ siteLinks:
   home:
     text: "Home"
     href: "/"
+  blog:
+    text: "Blog"
+    href: "/blog"
   source:
     text: "Source"
 pageLinks:
