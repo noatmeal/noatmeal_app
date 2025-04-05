@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier . --write",
+    "check": "next lint && prettier . --check && tsc --noEmit",
     "prepare": "husky"
   },
   "dependencies": {
