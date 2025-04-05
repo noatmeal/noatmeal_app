@@ -9,20 +9,20 @@ export async function Header() {
       <div className="mb-8">
         <h3>Site</h3>
         <nav className="flex items-center gap-4 mb-4">
-          <a href="#">Home</a>
-          <a href="#">Blog</a>
-          <a href="#">Projects</a>
-          <a href="#">About</a>
-          <a href="#">Archive</a>
+          <a href="#">{content.siteLinks.home}Home</a>
+          <a href="#">{content.siteLinks.blog}</a>
+          <a href="#">{content.siteLinks.projects}</a>
+          <a href="#">{content.siteLinks.about}</a>
+          <a href="#">{content.siteLinks.archive}</a>
           <ModeToggle />
         </nav>
 
         <h3>Page</h3>
         <nav className="flex items-center gap-4">
-          <a href="#">Top</a>
-          <a href="#">Comments</a>
-          <a href="#">Share</a>
-          <a href="#">Print</a>
+          <a href="#">{content.pageLinks.top}</a>
+          <a href="#">{content.pageLinks.comments}</a>
+          <a href="#">{content.pageLinks.share}</a>
+          <a href="#">{content.pageLinks.print}</a>
         </nav>
       </div>
     </>
