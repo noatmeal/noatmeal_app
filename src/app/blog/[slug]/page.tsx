@@ -21,13 +21,18 @@ interface BlogPageProps {
 // Function to generate static paths for all blog posts
 export async function generateStaticParams() {
   try {
-    const filenames = await fs.readdir(path.join(process.cwd(), BLOG_CONTENT_DIR));
+    const filenames = await fs.readdir(
+      path.join(process.cwd(), BLOG_CONTENT_DIR),
+    );
     const yamlFilenames = filenames.filter((fn) => fn.endsWith(".yaml"));
     return yamlFilenames.map((filename) => ({
       slug: path.basename(filename, ".yaml"),
     }));
   } catch (error) {
-    console.error("Error reading blog content directory for static params:", error);
+    console.error(
+      "Error reading blog content directory for static params:",
+      error,
+    );
     return []; // Return empty array if directory doesn't exist or error occurs
   }
 }

@@ -42,14 +42,14 @@ async function getPostMetadata(
 export default async function BlogFeed() {
   let posts: BlogPostMetadata[] = [];
   try {
-    const filenames = await fs.readdir(path.join(process.cwd(), BLOG_CONTENT_DIR));
+    const filenames = await fs.readdir(
+      path.join(process.cwd(), BLOG_CONTENT_DIR),
+    );
     const yamlFilenames = filenames.filter((fn) => fn.endsWith(".yaml"));
 
     const metadataPromises = yamlFilenames.map(getPostMetadata);
     const results = await Promise.all(metadataPromises);
-    posts = results.filter(
-      (meta): meta is BlogPostMetadata => meta !== null,
-    ); // Filter out nulls
+    posts = results.filter((meta): meta is BlogPostMetadata => meta !== null); // Filter out nulls
 
     // Sort posts by date, newest first
     posts.sort((a, b) => b.date.localeCompare(a.date));
