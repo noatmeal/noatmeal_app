@@ -12,8 +12,7 @@ const BLOG_CONTENT_DIR = "src/content/blog";
 
 export default async function BlogFeed() {
   // Fetch all posts metadata using the new utility function
-  const posts: BlogPostMetadata[] =
-    await getAllPostsMetadata(BLOG_CONTENT_DIR);
+  const posts: BlogPostMetadata[] = await getAllPostsMetadata(BLOG_CONTENT_DIR);
 
   // Sort posts by date, newest first
   // Error handling for directory reading is now inside getAllPostsMetadata
