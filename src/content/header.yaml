@@ -1,16 +1,40 @@
 title: "A Bowl of Noatmeal"
-siteLinks: 
+githubRepoUrl: "https://github.com/noatmeal/noatmeal_app/blob/main/"
+headerContentFilename: "src/content/header.yaml"
+siteLinks:
   navAreaName: "Site"
-  home: "Home"
-  blog: "Blog"
-  projects: "Projects"
-  about: "About"
-  archive: "Archive"
-  source: "Source"
+  home:
+    text: "Home"
+    href: "/"
+  blog:
+    text: "Blog"
+    href: "/blog" # Placeholder, adjust as needed
+  projects:
+    text: "Projects"
+    href: "/projects" # Placeholder, adjust as needed
+  about:
+    text: "About"
+    href: "/about" # Placeholder, adjust as needed
+  archive:
+    text: "Archive"
+    href: "/archive" # Placeholder, adjust as needed
+  source:
+    text: "Source"
+    # href is constructed dynamically in the component
 pageLinks:
   navAreaName: "Page"
-  top: "Top"
-  comments: "Comments"
-  share: "Share"
-  print: "Print"
-  source: "Source"
+  top:
+    text: "Top"
+    href: "#" # Standard anchor link
+  comments:
+    text: "Comments"
+    href: "#comments" # Placeholder, adjust based on comment section ID
+  share:
+    text: "Share"
+    href: "#" # Placeholder, sharing functionality might need JS
+  print:
+    text: "Print"
+    href: "javascript:window.print()" # Standard print JS
+  source:
+    text: "Source"
+    # href is constructed dynamically in the component
