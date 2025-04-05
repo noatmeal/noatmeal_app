@@ -14,17 +14,11 @@ interface HeaderContent {
   siteLinks: {
     navAreaName: string;
     home: LinkItem;
-    blog: LinkItem;
-    projects: LinkItem;
-    about: LinkItem;
-    archive: LinkItem;
     source: LinkItem; // href constructed dynamically
   };
   pageLinks: {
     navAreaName: string;
     top: LinkItem;
-    comments: LinkItem;
-    share: LinkItem;
     print: LinkItem;
     source: LinkItem; // href constructed dynamically
   };
@@ -53,18 +47,6 @@ export async function Header({ pageContentFilename }: HeaderProps) {
           <a href={content.siteLinks.home.href}>
             {content.siteLinks.home.text}
           </a>
-          <a href={content.siteLinks.blog.href}>
-            {content.siteLinks.blog.text}
-          </a>
-          <a href={content.siteLinks.projects.href}>
-            {content.siteLinks.projects.text}
-          </a>
-          <a href={content.siteLinks.about.href}>
-            {content.siteLinks.about.text}
-          </a>
-          <a href={content.siteLinks.archive.href}>
-            {content.siteLinks.archive.text}
-          </a>
           <a href={headerSourceUrl} target="_blank" rel="noopener noreferrer">
             {content.siteLinks.source.text}
           </a>
@@ -74,12 +56,6 @@ export async function Header({ pageContentFilename }: HeaderProps) {
         <h3>{content.pageLinks.navAreaName}</h3>
         <nav className="flex items-center gap-4">
           <a href={content.pageLinks.top.href}>{content.pageLinks.top.text}</a>
-          <a href={content.pageLinks.comments.href}>
-            {content.pageLinks.comments.text}
-          </a>
-          <a href={content.pageLinks.share.href}>
-            {content.pageLinks.share.text}
-          </a>
           <a href={content.pageLinks.print.href}>
             {content.pageLinks.print.text}
           </a>
