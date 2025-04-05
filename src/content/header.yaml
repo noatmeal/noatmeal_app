@@ -1,1 +1,12 @@
 title: "A Bowl of Noatmeal"
+siteLinks: 
+  home: "Home"
+  blog: "Blog"
+  projects: "Projects"
+  about: "About"
+  archive: "Archive"
+pageLinks:
+  top: "Top"
+  comments: "Comments"
+  share: "Share"
+  print: "Print" 
