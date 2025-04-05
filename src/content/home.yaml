@@ -1,4 +1,3 @@
-title: "A Bowl of Noatmeal"
 greetings:
   title: "Greetings!"
   content: |
@@ -8,8 +7,8 @@ greetings:
     there.
 contact:
   title: "Contact"
-  email: "Noatmeal 94 (at) gmail dot com"
-  content: |
+  email: "Send an email to Noatmeal 94 (at) gmail dot com"
+  noSocialMedia: |
     I mostly use social media as a way to advertise what I'm doing here. So 
     I likely won't respond to any social media accounts you see by me in the 
     wild and would prefer that you just email me. However, if you're aware 
