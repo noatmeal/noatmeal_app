@@ -7,9 +7,9 @@ export async function Header() {
     <>
       <h1>{content.title}</h1>
       <div className="mb-8">
-        <h3>Site</h3>
+        <h3>{content.siteLinks.navAreaName}</h3>
         <nav className="flex items-center gap-4 mb-4">
-          <a href="#">{content.siteLinks.home}Home</a>
+          <a href="#">{content.siteLinks.home}</a>
           <a href="#">{content.siteLinks.blog}</a>
           <a href="#">{content.siteLinks.projects}</a>
           <a href="#">{content.siteLinks.about}</a>
@@ -17,7 +17,7 @@ export async function Header() {
           <ModeToggle />
         </nav>
 
-        <h3>Page</h3>
+        <h3>{content.pageLinks.navAreaName}</h3>
         <nav className="flex items-center gap-4">
           <a href="#">{content.pageLinks.top}</a>
           <a href="#">{content.pageLinks.comments}</a>

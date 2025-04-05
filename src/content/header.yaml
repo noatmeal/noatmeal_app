@@ -1,11 +1,13 @@
 title: "A Bowl of Noatmeal"
 siteLinks: 
+  navAreaName: "Site"
   home: "Home"
   blog: "Blog"
   projects: "Projects"
   about: "About"
   archive: "Archive"
 pageLinks:
+  navAreaName: "Page"
   top: "Top"
   comments: "Comments"
   share: "Share"
