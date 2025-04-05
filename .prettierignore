@@ -1,0 +1,6 @@
+# Ignore artifacts:
+node_modules
+README.md
+src/app/favicon.ico
+src/content
+src/fonts
