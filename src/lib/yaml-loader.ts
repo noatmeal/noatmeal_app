@@ -53,7 +53,10 @@ export async function getAllPostsMetadata(
   try {
     filenames = await fs.readdir(absolutePath);
   } catch (error) {
-    console.error(`Error reading directory for posts at ${directoryPath}:`, error);
+    console.error(
+      `Error reading directory for posts at ${directoryPath}:`,
+      error,
+    );
     return []; // Return empty if directory doesn't exist or error occurs
   }
 
