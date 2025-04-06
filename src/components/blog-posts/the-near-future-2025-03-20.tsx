@@ -1,7 +1,7 @@
 import React from "react";
+
 import Link from "next/link";
 
-// Define types based on the YAML structure
 interface ContentItem {
   content: string;
 }
@@ -28,10 +28,10 @@ interface ListOfWants {
 
 interface TheNearFutureContent {
   title: string;
-  date: string; // Assuming date is always present based on YAML
+  date: string;
   firstParagraph: ContentItem;
   listOfWants: ListOfWants;
-  secondParagraph: ContentItem & { links?: { [key: string]: string } }; // Added optional links
+  secondParagraph: ContentItem & { links?: { [key: string]: string } };
   thirdParagraph: ContentItem;
 }
 
@@ -40,8 +40,6 @@ interface TheNearFuture20250320Props {
 }
 
 export function TheNearFuture20250320({ content }: TheNearFuture20250320Props) {
-  // Destructure with types, defaults are less necessary but can be kept for robustness if needed
-  // Removed default values as types should guarantee structure, assuming valid YAML input
   const {
     title,
     firstParagraph,
@@ -88,9 +86,6 @@ export function TheNearFuture20250320({ content }: TheNearFuture20250320Props) {
       </ul>
 
       <p>{secondParagraph.content}</p>
-
-      {/* Example of accessing optional links if needed */}
-      {/* {secondParagraph.links?.cindarellaBook && <a href={secondParagraph.links.cindarellaBook}>Cindarella Book</a>} */}
 
       <p>{thirdParagraph.content}</p>
     </>
