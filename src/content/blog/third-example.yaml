@@ -1,0 +1,21 @@
+# Example with nested data and maybe a list
+postTitle: "A More Complex Example"
+meta:
+  publication_date: "2025-04-07"
+  tags:
+    - example
+    - nested
+    - yaml
+mainContent:
+  introduction: |
+    This demonstrates handling nested data structures within the YAML.
+    The component `ThirdExample.tsx` will need to access `meta.publication_date` and `mainContent.introduction`.
+  sections:
+    - heading: "Section 1"
+      text: "Content for the first section."
+    - heading: "Section 2"
+      text: "Content for the second section, showing a list of items."
+      items:
+        - "Item A"
+        - "Item B"
+```
