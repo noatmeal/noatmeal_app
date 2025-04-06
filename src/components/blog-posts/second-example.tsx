@@ -14,7 +14,7 @@ export function SecondExample({ content }: SecondExampleProps) {
   const { title = "Default Title", publishDate, author, body = "No content available." } = content || {};
 
   return (
-    <article className="prose dark:prose-invert lg:prose-xl mx-auto p-4">
+    <>
       <h1>{title}</h1>
       {publishDate && ( // Conditionally render if data exists
         <p>
@@ -28,7 +28,6 @@ export function SecondExample({ content }: SecondExampleProps) {
       )}
       {/* Render the main body content */}
       <div style={{ whiteSpace: "pre-wrap" }}>{body}</div>
-    </article>
+    </>
   );
 }
-```

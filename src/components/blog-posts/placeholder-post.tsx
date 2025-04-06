@@ -15,16 +15,15 @@ export function PlaceholderPost({ content }: PlaceholderPostProps) {
   const { title = "Untitled Post", date = "No date", content: textContent = "" } = content || {};
 
   return (
-    <article className="prose dark:prose-invert lg:prose-xl mx-auto p-4">
+    <>
       <h1>{title}</h1>
       <p>
         <em>Published on: {date}</em>
       </p>
       {/* Using prose class for basic markdown-like styling */}
       <div style={{ whiteSpace: "pre-wrap" }}>{textContent}</div>
-    </article>
+    </>
   );
 }
 
 // Ensure the dynamic import in page.tsx matches this (named export).
-```
