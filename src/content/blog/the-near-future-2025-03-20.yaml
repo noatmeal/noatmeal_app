@@ -21,10 +21,11 @@ listOfWants:
   fourthWant: 
     content: 
       sentence: 
-        firstPart: "Understand concepts like"
+        firstPart: "Understand concepts like "
         secondPart: 
           content: "the Lambda Cube"
           link: "https://en.wikipedia.org/wiki/Lambda_cube"
+        finalPart: "."
 secondParagraph: 
   content: >
     My undergraduate and master's studies centered on mathematics with a minor 
