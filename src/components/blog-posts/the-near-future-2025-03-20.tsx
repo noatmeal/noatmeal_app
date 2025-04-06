@@ -18,9 +18,9 @@ export function TheNearFuture20250320({ content }: TheNearFutureProps) {
 
       {firstParagraph?.content && <p>{firstParagraph.content}</p>}
 
-      <ul>
-        <li key={0}>Just stuff</li>
-        <li key={1}>More stuff</li>
+      <ul className="list-none pl-0 my-4">
+        <li key={0} className="flex items-start mb-2 before:content-['->'] before:mr-2">Just stuff</li>
+        <li key={1} className="flex items-start mb-2 before:content-['->'] before:mr-2">More stuff</li>
       </ul>
 
       {secondParagraph?.content && <p>{secondParagraph.content}</p>}
