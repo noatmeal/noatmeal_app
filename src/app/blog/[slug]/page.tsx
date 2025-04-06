@@ -1,6 +1,6 @@
 import { Header } from "@/components/header";
-import { getYamlContent, getSlugsFromDirectory } from "@/lib/yaml-loader"; // Import new function
-import path from "path"; // fs is no longer needed here
+import { getYamlContent, getSlugsFromDirectory } from "@/lib/yaml-loader";
+import path from "path";
 import { notFound } from "next/navigation";
 
 const BLOG_CONTENT_DIR = "src/content/blog";
@@ -12,9 +12,9 @@ interface BlogPostContent {
 }
 
 interface BlogPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Function to generate static paths for all blog posts
@@ -50,7 +50,8 @@ async function getPostContent(
   return null;
 }
 
-export default async function BlogPostPage({ params }: BlogPageProps) {
+export default async function BlogPostPage(props: BlogPageProps) {
+  const params = await props.params;
   const { slug } = params;
   const postData = await getPostContent(slug);
 
@@ -68,8 +69,6 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
         <p>
           <em>Published on: {content.date}</em>
         </p>
-        {/* Render markdown or handle multiline string appropriately */}
-        {/* Using pre-wrap for simple multiline text display */}
         <div style={{ whiteSpace: "pre-wrap" }}>{content.content}</div>
       </article>
     </>
