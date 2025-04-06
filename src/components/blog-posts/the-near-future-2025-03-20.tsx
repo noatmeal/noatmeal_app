@@ -4,7 +4,6 @@ import Link from "next/link";
 export function TheNearFuture20250320({ content }: TheNearFutureProps) {
   const {
     title = "Untitled Post",
-    date = "No date",
     firstParagraph = "",
     listOfWants = {},
     secondParagraph = "",
