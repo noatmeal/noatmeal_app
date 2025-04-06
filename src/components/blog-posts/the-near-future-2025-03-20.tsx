@@ -21,13 +21,13 @@ export function TheNearFuture20250320({ content }: TheNearFutureProps) {
       <ul className="list-none pl-0 my-4">
         <li
           key={0}
-          className="flex items-start mb-2 before:content-['->'] before:mr-2"
+          className="flex items-baseline mb-2 before:content-['->'] before:mr-2 before:flex-shrink-0"
         >
          <span>{listOfWants.firstWant.content}</span>
         </li>
         <li
           key={1}
-          className="flex items-start mb-2 before:content-['->'] before:mr-2"
+          className="flex items-baseline mb-2 before:content-['->'] before:mr-2 before:flex-shrink-0"
         >
           More stuff
         </li>
