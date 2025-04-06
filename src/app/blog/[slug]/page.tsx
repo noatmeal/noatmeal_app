@@ -9,9 +9,9 @@ const BLOG_CONTENT_DIR = "src/content/blog";
 const BLOG_COMPONENTS_DIR = "src/components/blog-posts";
 
 interface BlogPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
