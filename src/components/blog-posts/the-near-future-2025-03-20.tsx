@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
-export function TheNearFuture20250320({ content }: TheNearFutureProps) {
+interface TheNearFuture20250320Props {}
+
+export function TheNearFuture20250320({ content }: TheNearFuture20250320Props) {
   const {
     title = "Untitled Post",
     firstParagraph = "",
