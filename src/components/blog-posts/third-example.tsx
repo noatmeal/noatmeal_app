@@ -36,14 +36,18 @@ export function ThirdExample({ content }: ThirdExampleProps) {
         </p>
       )}
       {tags.length > 0 && (
-        <div className="not-prose text-sm text-muted-foreground mb-4"> {/* Example: Style tags differently */}
+        <div className="not-prose text-sm text-muted-foreground mb-4">
+          {" "}
+          {/* Example: Style tags differently */}
           <strong>Tags:</strong> {tags.join(", ")}
         </div>
       )}
       {intro && <p>{intro}</p>}
 
       {sections.map((section, index) => (
-        <section key={index} className="mt-6"> {/* Add some margin between sections */}
+        <section key={index} className="mt-6">
+          {" "}
+          {/* Add some margin between sections */}
           {section.heading && <h2>{section.heading}</h2>}
           {section.text && <p>{section.text}</p>}
           {section.items && section.items.length > 0 && (
