@@ -28,7 +28,7 @@ export function ThirdExample({ content }: ThirdExampleProps) {
   const sections = content?.mainContent?.sections ?? [];
 
   return (
-    <article className="prose dark:prose-invert lg:prose-xl mx-auto p-4">
+    <>
       <h1>{title}</h1>
       {pubDate && (
         <p>
@@ -55,7 +55,6 @@ export function ThirdExample({ content }: ThirdExampleProps) {
           )}
         </section>
       ))}
-    </article>
+    </>
   );
 }
-```

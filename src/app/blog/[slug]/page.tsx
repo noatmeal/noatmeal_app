@@ -16,7 +16,8 @@ const BLOG_COMPONENTS_DIR = "src/components/blog-posts";
 // }
 
 interface BlogPageProps {
-  params: { // params is not a Promise here, Next.js resolves it
+  params: {
+    // params is not a Promise here, Next.js resolves it
     slug: string;
   };
 }
@@ -40,7 +41,7 @@ async function getPostContent(
     // Log error but don't expose details potentially
     console.error(`Error loading content for slug "${slug}"`);
     // Optionally check error type, e.g., file not found vs parse error
-    if (error instanceof Error && 'code' in error && error.code === 'ENOENT') {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
       console.error(`File not found: ${filePath}`);
     } else {
       console.error(`Failed to load or parse ${filePath}:`, error);
@@ -50,7 +51,9 @@ async function getPostContent(
 }
 
 // Helper function to dynamically load the component based on slug
-async function loadBlogPostComponent(slug: string): Promise<React.ComponentType<{ content: Record<string, any> }> | null> {
+async function loadBlogPostComponent(
+  slug: string,
+): Promise<React.ComponentType<{ content: Record<string, any> }> | null> {
   const componentName = toPascalCase(slug); // e.g., placeholder-post -> PlaceholderPost
   const componentPath = `${BLOG_COMPONENTS_DIR}/${slug}`; // Path relative to root for dynamic import
 
@@ -67,21 +70,32 @@ async function loadBlogPostComponent(slug: string): Promise<React.ComponentType<
     if (componentModule && componentModule[componentName]) {
       return componentModule[componentName];
     } else {
-      console.error(`Component ${componentName} not found in module ${componentPath}.tsx`);
+      console.error(
+        `Component ${componentName} not found in module ${componentPath}.tsx`,
+      );
       return null;
     }
   } catch (error) {
-    console.error(`Failed to load component for slug "${slug}" at ${componentPath}:`, error);
+    console.error(
+      `Failed to load component for slug "${slug}" at ${componentPath}:`,
+      error,
+    );
     // Check if the error is specifically module not found
-    if (error instanceof Error && 'code' in error && error.code === 'MODULE_NOT_FOUND') {
-       console.error(`Ensure component file exists at src/components/blog-posts/${slug}.tsx and exports ${componentName}`);
+    if (
+      error instanceof Error &&
+      "code" in error &&
+      error.code === "MODULE_NOT_FOUND"
+    ) {
+      console.error(
+        `Ensure component file exists at src/components/blog-posts/${slug}.tsx and exports ${componentName}`,
+      );
     }
     return null;
   }
 }
 
-
-export default async function BlogPostPage({ params }: BlogPageProps) { // Destructure params directly
+export default async function BlogPostPage({ params }: BlogPageProps) {
+  // Destructure params directly
   const { slug } = params;
   const postData = await getPostContent(slug);
 
@@ -105,7 +119,6 @@ export default async function BlogPostPage({ params }: BlogPageProps) { // Destr
   return (
     <>
       <Header pageContentFilename={filename} />
-      {/* Render the dynamically loaded component, passing the content */}
       <PostComponent content={content} />
     </>
   );

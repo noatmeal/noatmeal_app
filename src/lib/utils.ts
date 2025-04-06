@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 // Function to convert kebab-case (like a slug) to PascalCase (like a component name)
 export function toPascalCase(str: string): string {
   return str
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('');
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join("");
 }
