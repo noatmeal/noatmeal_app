@@ -16,10 +16,10 @@ const BLOG_COMPONENTS_DIR = "src/components/blog-posts";
 // }
 
 interface BlogPageProps {
-  params: {
+  params: Promise<{
     // params is not a Promise here, Next.js resolves it
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
@@ -94,7 +94,8 @@ async function loadBlogPostComponent(
   }
 }
 
-export default async function BlogPostPage({ params }: BlogPageProps) {
+export default async function BlogPostPage(props: BlogPageProps) {
+  const params = await props.params;
   // Destructure params directly
   const { slug } = params;
   const postData = await getPostContent(slug);
