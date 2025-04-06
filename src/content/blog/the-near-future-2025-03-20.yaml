@@ -4,19 +4,27 @@ date: 2025-03-20
 firstParagraph: 
   content: >
     I've had several different ambitions over the past seven years
-    or so of my life. Among the ones that stick around in my head, I've wanted to:
+    or so of my life. Among the ones that stick around in my head, I've wanted 
+    to:
 listOfWants:
-  - content: >
+  firstWant: 
+    content: >
       Make a proof assistant so that I could understand
       mathematical proofs at a deeper level.
-  - content: "Create a dependently typed programming language."
-  - content: >
+  secondWant: 
+    content: "Create a dependently typed programming language."
+  thirdWant: 
+    content: >
       Create text based games with a dependently typed programming language and 
       then explore that game's "world" with the type/proof system of that 
       language. 
-  - content: "Understand concepts like the Lambda Cube"
-    links: 
-      lambdaCube: "https://en.wikipedia.org/wiki/Lambda_cube"
+  fourthWant: 
+    content: 
+      sentence: 
+        firstPart: "Understand concepts like"
+        secondPart: 
+          content: "the Lambda Cube"
+          link: "https://en.wikipedia.org/wiki/Lambda_cube"
 secondParagraph: 
   content: >
     My undergraduate and master's studies centered on mathematics with a minor 

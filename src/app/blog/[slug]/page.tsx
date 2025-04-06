@@ -43,7 +43,7 @@ async function loadBlogPostComponent(
 ): Promise<React.ComponentType<{ content: Record<string, unknown> }> | null> {
   const componentName = toPascalCase(slug);
   const componentPath = `${BLOG_COMPONENTS_DIR}/${slug}`;
-
+  console.log(componentPath);
   try {
     const componentModule = await import(`@/components/blog-posts/${slug}`);
 
