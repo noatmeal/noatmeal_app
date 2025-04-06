@@ -6,15 +6,14 @@ export function TheNearFuture20250320({ content }: TheNearFutureProps) {
     title = "Untitled Post",
     date = "No date",
     firstParagraph = "",
-    listOfWants = [],
+    listOfWants = {},
     secondParagraph = "",
     thirdParagraph = "",
   } = content || {};
-
+  console.log(listOfWants.fourthWant);
   return (
     <>
       <h1>{title}</h1>
-      <p>Published on: {date}</p>
 
       {firstParagraph?.content && <p>{firstParagraph.content}</p>}
 
@@ -23,13 +22,30 @@ export function TheNearFuture20250320({ content }: TheNearFutureProps) {
           key={0}
           className="flex items-baseline mb-2 before:content-['->'] before:mr-2 before:flex-shrink-0"
         >
-         <span>{listOfWants.firstWant.content}</span>
+          <span>{listOfWants.firstWant.content}</span>
         </li>
         <li
           key={1}
           className="flex items-baseline mb-2 before:content-['->'] before:mr-2 before:flex-shrink-0"
         >
-          More stuff
+          {listOfWants.secondWant.content}
+        </li>
+        <li
+          key={2}
+          className="flex items-baseline mb-2 before:content-['->'] before:mr-2 before:flex-shrink-0"
+        >
+          {listOfWants.thirdWant.content}
+        </li>
+        <li
+          key={3}
+          className="flex items-baseline mb-2 before:content-['->'] before:mr-2 before:flex-shrink-0"
+        >
+          {listOfWants.fourthWant.content.sentence.firstPart}
+          <span>&nbsp;</span>
+          <Link href={listOfWants.fourthWant.content.sentence.secondPart.link}>
+            {listOfWants.fourthWant.content.sentence.secondPart.content}
+          </Link>
+          {listOfWants.fourthWant.content.sentence.finalPart}
         </li>
       </ul>
 
