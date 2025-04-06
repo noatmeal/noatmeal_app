@@ -42,7 +42,7 @@ export default async function BlogPostPage(props: BlogPageProps) {
   const postData = await getPostContent(slug);
 
   if (!postData) {
-    notFound(); 
+    notFound();
   }
 
   const { content, filename } = postData;
