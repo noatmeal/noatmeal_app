@@ -3,7 +3,7 @@ import { getYamlContent, getSlugsFromDirectory } from "@/lib/yaml-loader";
 import path from "path";
 import { notFound } from "next/navigation";
 import React from "react";
-import { toPascalCase } from "@/lib/utils"; 
+import { toPascalCase } from "@/lib/utils";
 
 const BLOG_CONTENT_DIR = "src/content/blog";
 const BLOG_COMPONENTS_DIR = "src/components/blog-posts";
@@ -41,11 +41,10 @@ async function getPostContent(
 async function loadBlogPostComponent(
   slug: string,
 ): Promise<React.ComponentType<{ content: Record<string, unknown> }> | null> {
-  const componentName = toPascalCase(slug); 
-  const componentPath = `${BLOG_COMPONENTS_DIR}/${slug}`; 
+  const componentName = toPascalCase(slug);
+  const componentPath = `${BLOG_COMPONENTS_DIR}/${slug}`;
 
   try {
-
     const componentModule = await import(`@/components/blog-posts/${slug}`);
 
     if (componentModule && componentModule[componentName]) {
@@ -81,7 +80,7 @@ export default async function BlogPostPage(props: BlogPageProps) {
   const postData = await getPostContent(slug);
 
   if (!postData) {
-    notFound(); 
+    notFound();
   }
 
   const { content, filename } = postData;
