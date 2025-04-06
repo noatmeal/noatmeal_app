@@ -1,0 +1,12 @@
+# Example with a different structure
+title: "Second Example Post"
+publishDate: "2025-04-06" # Different key name for date
+author: "AI Assistant"
+body: |
+  This post demonstrates a slightly different YAML structure.
+  It uses 'publishDate' instead of 'date' and 'body' instead of 'content'.
+  The corresponding component `SecondExample.tsx` needs to handle these keys.
+
+  - It can include lists.
+  - Or other Markdown-like elements if the component supports rendering them.
+```
