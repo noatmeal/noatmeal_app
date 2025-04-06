@@ -30,7 +30,7 @@ export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
 // Return raw content and filename
 async function getPostContent(
   slug: string,
-): Promise<{ content: Record<string, any>; filename: string } | null> {
+): Promise<{ content: Record<string, unknown>; filename: string } | null> {
   const filename = `${slug}.yaml`;
   const filePath = path.join(BLOG_CONTENT_DIR, filename);
   try {
@@ -53,7 +53,7 @@ async function getPostContent(
 // Helper function to dynamically load the component based on slug
 async function loadBlogPostComponent(
   slug: string,
-): Promise<React.ComponentType<{ content: Record<string, any> }> | null> {
+): Promise<React.ComponentType<{ content: Record<string, unknown> }> | null> {
   const componentName = toPascalCase(slug); // e.g., placeholder-post -> PlaceholderPost
   const componentPath = `${BLOG_COMPONENTS_DIR}/${slug}`; // Path relative to root for dynamic import
 

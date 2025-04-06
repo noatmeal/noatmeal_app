@@ -11,7 +11,12 @@ interface SecondExampleProps {
 }
 
 export function SecondExample({ content }: SecondExampleProps) {
-  const { title = "Default Title", publishDate, author, body = "No content available." } = content || {};
+  const {
+    title = "Default Title",
+    publishDate,
+    author,
+    body = "No content available.",
+  } = content || {};
 
   return (
     <>

@@ -12,7 +12,11 @@ interface PlaceholderPostProps {
 // The component name matches the PascalCase version of the slug
 export function PlaceholderPost({ content }: PlaceholderPostProps) {
   // Basic validation or default values could be added here
-  const { title = "Untitled Post", date = "No date", content: textContent = "" } = content || {};
+  const {
+    title = "Untitled Post",
+    date = "No date",
+    content: textContent = "",
+  } = content || {};
 
   return (
     <>
