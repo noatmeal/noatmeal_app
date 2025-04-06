@@ -17,16 +17,11 @@ interface BlogPageProps {
   }>;
 }
 
-// Function to generate static paths for all blog posts
 export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
-  // Add explicit return type
   const slugs = await getSlugsFromDirectory(BLOG_CONTENT_DIR);
-  return slugs.map((slug) => ({
-    slug: slug,
-  }));
+  return slugs.map((slug) => ({ slug }));
 }
 
-// Fetch content for a specific blog post
 async function getPostContent(
   slug: string,
 ): Promise<{ content: BlogPostContent; filename: string } | null> {
@@ -34,17 +29,8 @@ async function getPostContent(
   const filePath = path.join(BLOG_CONTENT_DIR, filename);
   try {
     const content = (await getYamlContent(filePath)) as BlogPostContent;
-    // Basic validation
-    if (
-      content &&
-      typeof content.title === "string" &&
-      typeof content.date === "string" &&
-      typeof content.content === "string"
-    ) {
-      return { content, filename: filePath };
-    }
+    return { content, filename: filePath };
   } catch (error) {
-    // File not found or YAML parsing error
     console.error(`Error loading content for slug "${slug}":`, error);
   }
   return null;
