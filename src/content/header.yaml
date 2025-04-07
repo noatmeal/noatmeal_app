@@ -9,6 +9,9 @@ siteLinks:
   blog:
     text: "Blog"
     href: "/blog"
+  rss:
+    text: "RSS"
+    href: "/rss.xml"
   source:
     text: "Source"
 pageLinks:

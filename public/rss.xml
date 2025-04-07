@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>A Bowl of Noatmeal - Blog</title>
+  <link>https://your-website-url.com</link>  <!-- Replace with your actual site URL -->
+  <description>Recent blog posts from A Bowl of Noatmeal</description>
+  <language>en-us</language>
+  <lastBuildDate>{new Date().toUTCString()}</lastBuildDate> <!-- This should be updated dynamically -->
+
+  <!-- Blog post items will go here -->
+  <!-- Example item:
+  <item>
+    <title>Example Post Title</title>
+    <link>https://your-website-url.com/blog/example-post-slug</link>
+    <pubDate>Mon, 07 Apr 2025 00:00:00 GMT</pubDate>
+    <guid>https://your-website-url.com/blog/example-post-slug</guid>
+    <description>A short description of the blog post.</description>
+  </item>
+  -->
+
+</channel>
+</rss>
