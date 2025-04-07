@@ -4,7 +4,6 @@ import Link from "next/link";
 
 export function TheNearFuture20250320({ content }) {
   const { paragraphs, title } = content;
-  console.log(paragraphs[3]);
   return (
     <>
       <h1>{title}</h1>
