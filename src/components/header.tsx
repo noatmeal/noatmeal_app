@@ -15,6 +15,7 @@ interface HeaderContent {
     navAreaName: string;
     home: LinkItem;
     blog: LinkItem;
+    rss: LinkItem;
     source: LinkItem; // href constructed dynamically
   };
   pageLinks: {
@@ -48,6 +49,9 @@ export async function Header({ pageContentFilename }: HeaderProps) {
           </a>
           <a href={content.siteLinks.blog.href}>
             {content.siteLinks.blog.text}
+          </a>
+          <a href={content.siteLinks.rss.href} target="_blank">
+            {content.siteLinks.rss.text}
           </a>
           <a href={headerSourceUrl} target="_blank" rel="noopener noreferrer">
             {content.siteLinks.source.text}
