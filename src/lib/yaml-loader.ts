@@ -34,7 +34,6 @@ export interface BlogPostMetadata {
 export async function getAllPostsMetadata(
   directoryPath: string,
 ): Promise<BlogPostMetadata[]> {
-  console.log(directoryPath);
   const absolutePath = path.join(process.cwd(), directoryPath);
   let filenames: string[];
 

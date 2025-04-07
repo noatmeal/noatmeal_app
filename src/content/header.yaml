@@ -10,7 +10,7 @@ siteLinks:
     text: "Blog"
     href: "/blog"
   rss:
-    text: "RSS"
+    text: "Subscribe to RSS Feed"
     href: "/rss.xml"
   source:
     text: "Source"
