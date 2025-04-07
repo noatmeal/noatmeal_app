@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function TheNearFuture20250320({ content }) {
   const { paragraphs, title } = content;
-  console.log(paragraphs[3])
+  console.log(paragraphs[3]);
   return (
     <>
       <h1>{title}</h1>
@@ -48,17 +48,13 @@ export function TheNearFuture20250320({ content }) {
       </ul>
 
       <p>
-        {paragraphs[1].sections[0]}
-        {" "}
-        {paragraphs[1].sections[1].sentences[0].parts[0]}
-        {" "}
+        {paragraphs[1].sections[0]}{" "}
+        {paragraphs[1].sections[1].sentences[0].parts[0]}{" "}
         <Link href={paragraphs[1].sections[1].sentences[0].parts[1].link}>
           {paragraphs[1].sections[1].sentences[0].parts[1].text}
-        </Link>
-        {" "}
+        </Link>{" "}
         {paragraphs[1].sections[1].sentences[0].parts[2]}
       </p>
-
 
       <p>
         {paragraphs[2].sections[0].sentences[0].parts[0]}
@@ -70,7 +66,6 @@ export function TheNearFuture20250320({ content }) {
       </p>
 
       <p>{paragraphs[3]}</p>
-
     </>
   );
 }
