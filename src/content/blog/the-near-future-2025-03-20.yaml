@@ -1,44 +1,59 @@
 ---
 title: The Near Future
 date: 2025-03-20
-firstParagraph: 
-  content: >
-    I've had several different ambitions over the past seven years
-    or so of my life. Among the ones that stick around in my head, I've wanted 
-    to:
-listOfWants:
-  firstWant: 
-    content: >
-      Make a proof assistant so that I could understand
-      mathematical proofs at a deeper level.
-  secondWant: 
-    content: "Create a dependently typed programming language."
-  thirdWant: 
-    content: >
-      Create text based games with a dependently typed programming language and 
-      then explore that game's "world" with the type/proof system of that 
-      language. 
-  fourthWant: 
-    content: 
-      sentence: 
-        firstPart: "Understand concepts like "
-        secondPart: 
-          content: "the Lambda Cube"
-          link: "https://en.wikipedia.org/wiki/Lambda_cube"
-        finalPart: "."
-secondParagraph: 
-  content: >
-    My undergraduate and master's studies centered on mathematics with a minor 
-    in computer science. So I fell just short of taking a solid introduction 
-    course to computer science theory and I also never took a good compiler 
-    course. Two classes I really wish I was forced to take in hindsight because 
-    understanding and knowing how to implement the machines that can recognize 
-    languages in the Chomsky Hierarchy are total blindspots in my education and 
-    these blindspots are necessary for every single one of my ambitions listed 
-    above. 
-  links:
-    cindarellaBook: > 
-      https://en.wikipedia.org/wiki/Introduction_to_Automata_Theory,_Languages,_
-      and_Computation#Nickname 
-thirdParagraph:
-  content: "So stay tuned :)"
+paragraphs:
+  - sections: 
+      - >-
+        I've had several different ambitions over the past seven years
+        or so of my life. Among the ones that stick around in my head, 
+        I've wanted to:
+      - sentences:
+          - >-
+              Make a proof assistant so that I could understand
+              mathematical proofs at a deeper level.
+          - Create a dependently typed programming language.
+          - >-
+              Create text based games with a dependently typed programming 
+              language and then explore that game's "world" with the type/proof 
+              system of that language.
+          - parts:
+              - Understand concepts like
+              - text: "the Lambda Cube"
+                link: "https://en.wikipedia.org/wiki/Lambda_cube"
+              - .
+  - sections:
+      - >-
+        My undergraduate and master's studies centered on mathematics with a minor 
+        in computer science. So I fell just short of taking a solid introduction 
+        course to computer science theory and I also never took a good compiler 
+        course.
+      - sentences: 
+          - parts: 
+              - >-
+                Two classes I really wish I was forced to take in hindsight, 
+                because understanding and knowing how to implement the machines that 
+                can recognize languages in the 
+              - text: "Chomsky Hierarchy" 
+                link: "https://en.wikipedia.org/wiki/Chomsky_hierarchy"
+              - >-
+                are total blindspots in my education and these blindspots are 
+                necessary for every single one of my ambitions listed above.
+  - sections:  
+      - sentences: 
+          - parts: 
+              - >-
+                Not too long ago I picked up the first edition of 
+                "Introduction to Automata Theory, Languages, and Computation" by 
+                John E. Hopcroft and Jeffry D. Ullman which is sometimes 
+                referred to as the "
+              - text: Cinderella Book
+                link: >-
+                  https://en.wikipedia.org/wiki/
+                  Introduction_to_Automata_Theory,_Languages,_and_Computation
+              - "\"."
+      - >-
+        It has the material that I need to learn and so that's where my focus is
+        going to be for the next several blog posts. I'm hoping to develop these
+        basic machines that recognize languages in Scheme, a language that I 
+        have a passing familiarity with but would enjoy more exposure to.
+  - "So stay tuned :)"
