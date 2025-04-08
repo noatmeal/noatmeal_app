@@ -1,0 +1,62 @@
+title: Getting Started With Lean
+date: 2025-03-20
+chapters:
+  - paragraphs:
+    - sections:
+      - sentences:
+        - parts: 
+          - In
+          - text: my post
+            link: /blog/the-near-future-2025-03-20
+          - >-
+            about where I intend to go with this blog for the next little while,
+            I mentioned that I wanted to work with the Scheme programming 
+            language.
+      - >-
+        However, I gave it some more thought and I decided against it for two 
+        reasons. The first reason is that the scheme specification drama is just 
+        a mess. I have no interest in deep diving into a flame war and coming 
+        out with a language I'd most likely be partially unsatisfied with. The 
+        second reason is that since I have ambitions towards working with and 
+        creating dependently typed programming languages, I thought I'd give 
+        Lean, the hot new dependently typed language on the block, a test drive. 
+    - sections: 
+      - sentences:
+        - parts:
+          - The
+          - text: Lean programming language
+            link: https://lean-lang.org/
+          - is pretty much exclusively known for
+          - text: mathlib
+            link: https://github.com/leanprover-community/mathlib4
+          - >-
+            , its most popular library that contains proofs for more math than 
+            most people ever learn due to a lot of attention given by the 
+            broader math community.
+        - >-
+          However, Lean was developed with general purpose programming in mind.
+        - parts: 
+          - >-
+            There appears to be efforts being made towards creating a
+          - text: standard library
+            link: https://github.com/leanprover-community/batteries
+          - and there's also
+          - text: a guide
+            link: https://lean-lang.org/functional_programming_in_lean/
+          - on how to do functional programming with this language.
+        - I just started fumbling around with this guide and so I thought I'd 
+          share my first hello world program in lean.  
+  - title: Notation
+    paragraphs: 
+      - >- 
+        I'll be sharing code in the following form and refer to these forms as 
+        "files" that live in a "repository":
+      - file: <The File Name>; 
+        repository: <The Repository Name>;
+        lines:
+          code:
+            - <First line of code>
+            - <Second line of code>
+          output: 
+            - <Output from the code>
+        
