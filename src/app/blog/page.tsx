@@ -15,11 +15,11 @@ export default async function BlogFeed() {
       <div>
         <h1>Chronological Feed</h1>
         {posts.length > 0 ? (
-          <ul>
+          <ul className="space-y-2">
             {posts.map((post) => (
-              <li key={post.slug}>
-                <span>{post.date} - </span>
-                <div className="inline-block">
+              <li key={post.slug} className="flex items-baseline gap-x-2">
+                <span className="flex-shrink-0">{post.date} - </span>
+                <div className="min-w-0"> {/* Allows text wrapping within this div */}
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </div>
               </li>
