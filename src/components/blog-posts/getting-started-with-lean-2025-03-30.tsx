@@ -145,9 +145,7 @@ export function GettingStartedWithLean20250330({ content }) {
         </CardFooter>
       </Card>
       <div className="m-4" />
-      <p>
-        {chapters[3].paragraphs[4]}
-      </p>
+      <p>{chapters[3].paragraphs[4]}</p>
     </>
   );
 }
