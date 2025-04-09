@@ -29,12 +29,10 @@ interface HeaderProps {
 }
 
 export async function Header({ pageContentFilename }: HeaderProps) {
-  // Load header content, explicitly casting to the defined type
   const content = (await getYamlContent(
     "src/content/header.yaml",
   )) as HeaderContent;
 
-  // Construct dynamic source URLs
   const headerSourceUrl = content.githubRepoUrl + content.headerContentFilename;
   const pageSourceUrl = content.githubRepoUrl + pageContentFilename;
 
