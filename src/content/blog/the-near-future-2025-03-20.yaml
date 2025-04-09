@@ -23,20 +23,19 @@ paragraphs:
               - .
   - sections:
       - >-
-        My undergraduate and master's studies centered on mathematics with a minor 
-        in computer science. So I fell just short of taking a solid introduction 
-        course to computer science theory and I also never took a good compiler 
-        course.
+        My undergraduate and master's studies centered on mathematics with a 
+        minor in computer science which caused me to fall just short of taking 
+        courses on computer science theory and compilers.
       - sentences: 
           - parts: 
               - >-
-                Two classes I really wish I was forced to take in hindsight, 
-                because understanding and knowing how to implement the machines that 
-                can recognize languages in the 
+                I really wish I prioritized taking these courses 
+                because understanding how to implement the machines 
+                that can recognize languages in the 
               - text: "Chomsky Hierarchy" 
                 link: "https://en.wikipedia.org/wiki/Chomsky_hierarchy"
               - >-
-                are total blindspots in my education and these blindspots are 
+                is a total blindspot in my education and it's 
                 necessary for every single one of my ambitions listed above.
   - sections:  
       - sentences: 

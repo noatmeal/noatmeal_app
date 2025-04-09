@@ -61,6 +61,7 @@ export function TheNearFuture20250320({ content }) {
           {paragraphs[2].sections[0].sentences[0].parts[1].text}
         </Link>
         {paragraphs[2].sections[0].sentences[0].parts[2]}
+        {" "}
         {paragraphs[2].sections[1]}
       </p>
 
