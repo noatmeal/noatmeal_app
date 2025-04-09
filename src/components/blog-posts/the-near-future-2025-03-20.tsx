@@ -37,11 +37,13 @@ export function TheNearFuture20250320({ content }) {
           className="flex items-baseline mb-2 
                      before:content-['->'] before:mr-2 before:flex-shrink-0"
         >
-          {paragraphs[0].sections[1].sentences[3].parts[0]}
-          <Link
-            className="ml-[1ch]"
-            href={paragraphs[0].sections[1].sentences[3].parts[1].link}
-          >
+          <span>
+            {paragraphs[0].sections[1].sentences[3].parts[0]}{" "}
+            <Link href={paragraphs[0].sections[1].sentences[3].parts[1].link}>
+              {paragraphs[0].sections[1].sentences[3].parts[1].text}
+            </Link>
+            {paragraphs[0].sections[1].sentences[3].parts[2]}
+          </span>
             {paragraphs[0].sections[1].sentences[3].parts[1].text}
           </Link>
           {paragraphs[0].sections[1].sentences[3].parts[2]}
