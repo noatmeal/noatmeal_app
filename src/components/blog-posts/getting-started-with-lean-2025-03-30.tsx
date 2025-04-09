@@ -134,9 +134,13 @@ export function GettingStartedWithLean20250330({ content }) {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          {chapters[3].paragraphs[3].lines.code.map((line, index) => (
-            <div key={index}>{line}</div>
-          ))}
+          {chapters[3].paragraphs[3].lines.code.map((line, index) => {
+            if(line !== " ") { 
+              return <div key={index}>{line}</div>
+            } else { 
+              return <br />
+            }
+          })}
         </CardContent>
         <CardFooter className="border-t">
           {chapters[3].paragraphs[3].lines.output.map((line, index) => (
