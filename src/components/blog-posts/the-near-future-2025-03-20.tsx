@@ -38,8 +38,10 @@ export function TheNearFuture20250320({ content }) {
                      before:content-['->'] before:mr-2 before:flex-shrink-0"
         >
           {paragraphs[0].sections[1].sentences[3].parts[0]}
-          <span>&nbsp;</span>
-          <Link href={paragraphs[0].sections[1].sentences[3].parts[1].link}>
+          <Link
+            className="ml-[1ch]" 
+            href={paragraphs[0].sections[1].sentences[3].parts[1].link}
+          >
             {paragraphs[0].sections[1].sentences[3].parts[1].text}
           </Link>
           {paragraphs[0].sections[1].sentences[3].parts[2]}
