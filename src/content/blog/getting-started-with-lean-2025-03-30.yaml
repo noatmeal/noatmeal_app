@@ -70,14 +70,29 @@ chapters:
       lines:
         code: 
           - /-
-          - >- 
-            We define the variable hello with type String to have the value 
+          - We define the variable hello with 
+          - type String to have the value 
+          - >-
             "world". 
           - /-
-          - def hello : String := "world"
+          - >-
+            def hello : String := "world"
     - file: HelloWorld.lean;
       repository: HelloWorld;
       lines:
         code: 
           - import HelloWorld.Basic 
- 
+    - file: Main.lean;
+      repository: HelloWorld
+      lines:
+        code: 
+          - import HelloWorld
+          - >-
+            def main : IO Unit := IO.println s!"Hello, {hello}!"
+        output:
+          - >-
+            Hello, World!
+    - >-
+      I'm aware that this syntax is closely related to how haskell does things 
+      but I'm not yet prepared to go into detail about how this works. 
+      I hope to do so in the future!  
