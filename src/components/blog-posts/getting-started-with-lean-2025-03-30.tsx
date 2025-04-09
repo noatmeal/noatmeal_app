@@ -90,6 +90,40 @@ export function GettingStartedWithLean20250330({ content }) {
           {chapters[1].paragraphs[1].lines.output[0]}
         </CardFooter>
       </Card>
+
+      <h2>{chapters[2].title}</h2>
+
+      <p>{chapters[3].paragraphs[0]}</p>
+
+      <div className="flex flex-wrap gap-4 justify-center">
+        <Card className="w-fit">
+          <CardHeader>
+            <CardTitle>{chapters[3].paragraphs[1].file}</CardTitle>
+            <CardDescription>
+              {chapters[3].paragraphs[1].repository}
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            {chapters[3].paragraphs[1].lines.code.map((line, index) => (
+              <div key={index}>{line}</div>
+            ))}
+          </CardContent>
+        </Card>
+
+        <Card className="w-fit">
+          <CardHeader>
+            <CardTitle>{chapters[3].paragraphs[2].file}</CardTitle>
+            <CardDescription>
+              {chapters[3].paragraphs[2].repository}
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            {chapters[3].paragraphs[2].lines.code.map((line, index) => (
+              <div key={index}>{line}</div>
+            ))}
+          </CardContent>
+        </Card>
+      </div>
     </>
   );
 }
