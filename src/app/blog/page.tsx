@@ -19,7 +19,7 @@ export default async function BlogFeed() {
             {posts.map((post) => (
               <li key={post.slug} className="flex items-baseline gap-x-2">
                 <span className="flex-shrink-0">{post.date} - </span>
-                <div className="min-w-0"> {/* Allows text wrapping within this div */}
+                <div className="min-w-0">
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </div>
               </li>
