@@ -59,4 +59,25 @@ chapters:
             - <Second line of code>
           output: 
             - <Output from the code>
-        
+  - title: Hello, World!
+  - paragraphs: 
+    - >-
+      A hello world program in Lean is very simple to write. Since that's the 
+      case, I'll also showcase some file structure, string interpolation, and 
+      comments in lean.
+    - file: HelloWorld/Basic.lean;
+      repository: HelloWorld;
+      lines:
+        code: 
+          - /-
+          - >- 
+            We define the variable hello with type String to have the value 
+            "world". 
+          - /-
+          - def hello : String := "world"
+    - file: HelloWorld.lean;
+      repository: HelloWorld;
+      lines:
+        code: 
+          - import HelloWorld.Basic 
+ 

@@ -86,8 +86,8 @@ export function GettingStartedWithLean20250330({ content }) {
           <div>{chapters[1].paragraphs[1].lines.code[0]}</div>
           <div>{chapters[1].paragraphs[1].lines.code[1]}</div>
         </CardContent>
-        <CardFooter>
-          <p>{chapters[1].paragraphs[1].lines.output[0]}</p>
+        <CardFooter className="border-t">
+          {chapters[1].paragraphs[1].lines.output[0]}
         </CardFooter>
       </Card>
     </>
