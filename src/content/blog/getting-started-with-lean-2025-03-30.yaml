@@ -83,7 +83,7 @@ chapters:
         code: 
           - import HelloWorld.Basic 
     - file: Main.lean;
-      repository: HelloWorld
+      repository: HelloWorld;
       lines:
         code: 
           - import HelloWorld
