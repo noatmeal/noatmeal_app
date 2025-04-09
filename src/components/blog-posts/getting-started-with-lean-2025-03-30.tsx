@@ -138,7 +138,7 @@ export function GettingStartedWithLean20250330({ content }) {
             if (line !== " ") {
               return <div key={index}>{line}</div>;
             } else {
-              return <br />;
+              return <br key={index} />;
             }
           })}
         </CardContent>
