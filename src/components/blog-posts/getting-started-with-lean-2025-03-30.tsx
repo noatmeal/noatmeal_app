@@ -13,7 +13,7 @@ import Link from "next/link";
 
 export function GettingStartedWithLean20250330({ content }) {
   const { chapters, title } = content;
-  console.log(chapters[1].paragraphs[1]);
+  console.log(chapters[3].paragraphs[2]);
 
   return (
     <>
@@ -91,6 +91,8 @@ export function GettingStartedWithLean20250330({ content }) {
         </CardFooter>
       </Card>
 
+      <div className="m-4" />
+
       <h2>{chapters[2].title}</h2>
 
       <p>{chapters[3].paragraphs[0]}</p>
@@ -109,7 +111,6 @@ export function GettingStartedWithLean20250330({ content }) {
             ))}
           </CardContent>
         </Card>
-
         <Card className="w-fit">
           <CardHeader>
             <CardTitle>{chapters[3].paragraphs[2].file}</CardTitle>
@@ -124,6 +125,29 @@ export function GettingStartedWithLean20250330({ content }) {
           </CardContent>
         </Card>
       </div>
+      <div className="m-4" />
+      <Card className="mx-auto w-fit">
+        <CardHeader>
+          <CardTitle>{chapters[3].paragraphs[3].file}</CardTitle>
+          <CardDescription>
+            {chapters[3].paragraphs[3].repository}
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          {chapters[3].paragraphs[3].lines.code.map((line, index) => (
+            <div key={index}>{line}</div>
+          ))}
+        </CardContent>
+        <CardFooter className="border-t">
+          {chapters[3].paragraphs[3].lines.output.map((line, index) => (
+            <div key={index}>{line}</div>
+          ))}
+        </CardFooter>
+      </Card>
+      <div className="m-4" />
+      <p>
+        {chapters[3].paragraphs[4]}
+      </p>
     </>
   );
 }
