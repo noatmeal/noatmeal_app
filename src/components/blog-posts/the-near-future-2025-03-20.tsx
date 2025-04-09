@@ -39,7 +39,7 @@ export function TheNearFuture20250320({ content }) {
         >
           {paragraphs[0].sections[1].sentences[3].parts[0]}
           <Link
-            className="ml-[1ch]" 
+            className="ml-[1ch]"
             href={paragraphs[0].sections[1].sentences[3].parts[1].link}
           >
             {paragraphs[0].sections[1].sentences[3].parts[1].text}
