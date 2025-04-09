@@ -13,9 +13,7 @@ export default async function BlogFeed() {
   const posts: BlogPostMetadata[] = await getAllPostsMetadata(BLOG_CONTENT_DIR);
   posts.sort((a, b) => b.date.localeCompare(a.date));
 
-  const content = (await getYamlContent(
-    "src/content/blog.yaml",
-  )) as HeaderContent;
+  const content = await getYamlContent("src/content/blog.yaml");
 
   return (
     <>
