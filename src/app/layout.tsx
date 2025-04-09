@@ -10,6 +10,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <title>A Bowl of Noatmeal</title>
+        <meta name="A Bowl of Noatmeal" content="My blog" />
+      </head>
       <body className="min-h-screen">
         <div className="mx-auto max-w-[80ch] px-4 py-8">
           <ThemeProvider
