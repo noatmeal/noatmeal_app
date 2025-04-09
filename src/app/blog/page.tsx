@@ -1,5 +1,9 @@
 import { Header } from "@/components/header";
-import { getAllPostsMetadata, BlogPostMetadata, getYamlContent } from "@/lib/yaml-loader";
+import {
+  getAllPostsMetadata,
+  BlogPostMetadata,
+  getYamlContent,
+} from "@/lib/yaml-loader";
 import Link from "next/link";
 
 const PAGE_CONTENT_FILENAME = "src/content/blog.yaml";
@@ -9,9 +13,9 @@ export default async function BlogFeed() {
   const posts: BlogPostMetadata[] = await getAllPostsMetadata(BLOG_CONTENT_DIR);
   posts.sort((a, b) => b.date.localeCompare(a.date));
 
-  const content = (await getYamlContent(                                         
-    "src/content/blog.yaml",                                                   
-  )) as HeaderContent; 
+  const content = (await getYamlContent(
+    "src/content/blog.yaml",
+  )) as HeaderContent;
 
   return (
     <>

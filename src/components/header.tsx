@@ -3,7 +3,7 @@ import { getYamlContent } from "@/lib/yaml-loader";
 
 interface LinkItem {
   text: string;
-  href?: string; 
+  href?: string;
 }
 
 interface HeaderContent {
@@ -15,16 +15,16 @@ interface HeaderContent {
     home: LinkItem;
     blog: LinkItem;
     rss: LinkItem;
-    source: LinkItem; 
+    source: LinkItem;
   };
   pageLinks: {
     navAreaName: string;
-    source: LinkItem; 
+    source: LinkItem;
   };
 }
 
 interface HeaderProps {
-  pageContentFilename: string; 
+  pageContentFilename: string;
 }
 
 export async function Header({ pageContentFilename }: HeaderProps) {
