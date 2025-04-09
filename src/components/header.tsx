@@ -1,10 +1,9 @@
 import { ModeToggle } from "./light-dark-toggle";
 import { getYamlContent } from "@/lib/yaml-loader";
 
-// Define the expected structure of the YAML content for type safety
 interface LinkItem {
   text: string;
-  href?: string; // href might be optional if constructed dynamically
+  href?: string; 
 }
 
 interface HeaderContent {
@@ -16,16 +15,16 @@ interface HeaderContent {
     home: LinkItem;
     blog: LinkItem;
     rss: LinkItem;
-    source: LinkItem; // href constructed dynamically
+    source: LinkItem; 
   };
   pageLinks: {
     navAreaName: string;
-    source: LinkItem; // href constructed dynamically
+    source: LinkItem; 
   };
 }
 
 interface HeaderProps {
-  pageContentFilename: string; // Filename for the current page's content
+  pageContentFilename: string; 
 }
 
 export async function Header({ pageContentFilename }: HeaderProps) {
@@ -40,7 +39,7 @@ export async function Header({ pageContentFilename }: HeaderProps) {
     <>
       <h1>{content.title}</h1>
       <div className="mb-8">
-        <h3>{content.siteLinks.navAreaName}</h3>
+        <h2>{content.siteLinks.navAreaName}</h2>
         <nav className="flex flex-wrap items-center gap-4 mb-4">
           <a href={content.siteLinks.home.href}>
             {content.siteLinks.home.text}
@@ -57,7 +56,7 @@ export async function Header({ pageContentFilename }: HeaderProps) {
           <ModeToggle />
         </nav>
 
-        <h3>{content.pageLinks.navAreaName}</h3>
+        <h2>{content.pageLinks.navAreaName}</h2>
         <nav className="flex flex-wrap items-center gap-4">
           <a href={pageSourceUrl} target="_blank" rel="noopener noreferrer">
             {content.pageLinks.source.text}
