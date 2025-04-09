@@ -75,7 +75,7 @@ export function GettingStartedWithLean20250330({ content }) {
 
       <p>{chapters[1].paragraphs[0]}</p>
 
-      <Card>
+      <Card className="mx-auto w-fit">
         <CardHeader>
           <CardTitle>{chapters[1].paragraphs[1].file}</CardTitle>
           <CardDescription>
