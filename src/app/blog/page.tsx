@@ -19,7 +19,9 @@ export default async function BlogFeed() {
             {posts.map((post) => (
               <li key={post.slug}>
                 <span>{post.date} - </span>
-                <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                <div className="inline-block">
+                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                </div>
               </li>
             ))}
           </ul>
