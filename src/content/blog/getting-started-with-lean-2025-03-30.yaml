@@ -87,6 +87,7 @@ chapters:
       lines:
         code: 
           - import HelloWorld
+          - " " 
           - >-
             def main : IO Unit := IO.println s!"Hello, {hello}!"
         output:
