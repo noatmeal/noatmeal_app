@@ -41,7 +41,7 @@ export async function Header({ pageContentFilename }: HeaderProps) {
       <h1>{content.title}</h1>
       <div className="mb-8">
         <h3>{content.siteLinks.navAreaName}</h3>
-        <nav className="flex items-center gap-4 mb-4">
+        <nav className="flex flex-wrap items-center gap-4 mb-4">
           <a href={content.siteLinks.home.href}>
             {content.siteLinks.home.text}
           </a>
@@ -58,7 +58,7 @@ export async function Header({ pageContentFilename }: HeaderProps) {
         </nav>
 
         <h3>{content.pageLinks.navAreaName}</h3>
-        <nav className="flex items-center gap-4">
+        <nav className="flex flex-wrap items-center gap-4">
           <a href={pageSourceUrl} target="_blank" rel="noopener noreferrer">
             {content.pageLinks.source.text}
           </a>
