@@ -8,12 +8,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { IContent } from "@/interfaces/content";
 
 import Link from "next/link";
 
-export function GettingStartedWithLean20250330({ content }) {
+export function GettingStartedWithLean20250330({
+  content,
+}: {
+  content: IContent;
+}) {
   const { chapters, title } = content;
-  console.log(chapters[3].paragraphs[2]);
 
   return (
     <>
@@ -87,7 +91,7 @@ export function GettingStartedWithLean20250330({ content }) {
           <div>{chapters[1].paragraphs[1].lines.code[1]}</div>
         </CardContent>
         <CardFooter className="border-t">
-          {chapters[1].paragraphs[1].lines.output[0]}
+          {chapters[1].paragraphs[1].lines.output?.[0]}
         </CardFooter>
       </Card>
 
@@ -95,31 +99,31 @@ export function GettingStartedWithLean20250330({ content }) {
 
       <h2>{chapters[2].title}</h2>
 
-      <p>{chapters[3].paragraphs[0]}</p>
+      <p>{chapters[2].paragraphs[0]}</p>
 
       <div className="flex flex-wrap gap-4 justify-center">
         <Card className="w-fit">
           <CardHeader>
-            <CardTitle>{chapters[3].paragraphs[1].file}</CardTitle>
+            <CardTitle>{chapters[2].paragraphs[1].file}</CardTitle>
             <CardDescription>
-              {chapters[3].paragraphs[1].repository}
+              {chapters[2].paragraphs[1].repository}
             </CardDescription>
           </CardHeader>
           <CardContent>
-            {chapters[3].paragraphs[1].lines.code.map((line, index) => (
+            {chapters[2].paragraphs[1].lines.code.map((line, index) => (
               <div key={index}>{line}</div>
             ))}
           </CardContent>
         </Card>
         <Card className="w-fit">
           <CardHeader>
-            <CardTitle>{chapters[3].paragraphs[2].file}</CardTitle>
+            <CardTitle>{chapters[2].paragraphs[2].file}</CardTitle>
             <CardDescription>
-              {chapters[3].paragraphs[2].repository}
+              {chapters[2].paragraphs[2].repository}
             </CardDescription>
           </CardHeader>
           <CardContent>
-            {chapters[3].paragraphs[2].lines.code.map((line, index) => (
+            {chapters[2].paragraphs[2].lines.code.map((line, index) => (
               <div key={index}>{line}</div>
             ))}
           </CardContent>
@@ -128,13 +132,13 @@ export function GettingStartedWithLean20250330({ content }) {
       <div className="m-4" />
       <Card className="mx-auto w-fit">
         <CardHeader>
-          <CardTitle>{chapters[3].paragraphs[3].file}</CardTitle>
+          <CardTitle>{chapters[2].paragraphs[3].file}</CardTitle>
           <CardDescription>
-            {chapters[3].paragraphs[3].repository}
+            {chapters[2].paragraphs[3].repository}
           </CardDescription>
         </CardHeader>
         <CardContent>
-          {chapters[3].paragraphs[3].lines.code.map((line, index) => {
+          {chapters[2].paragraphs[3].lines.code.map((line, index) => {
             if (line !== " ") {
               return <div key={index}>{line}</div>;
             } else {
@@ -143,13 +147,13 @@ export function GettingStartedWithLean20250330({ content }) {
           })}
         </CardContent>
         <CardFooter className="border-t">
-          {chapters[3].paragraphs[3].lines.output.map((line, index) => (
+          {chapters[2].paragraphs[3].lines.output?.map((line, index) => (
             <div key={index}>{line}</div>
           ))}
         </CardFooter>
       </Card>
       <div className="m-4" />
-      <p>{chapters[3].paragraphs[4]}</p>
+      <p>{chapters[2].paragraphs[4]}</p>
     </>
   );
 }
