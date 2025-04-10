@@ -51,7 +51,7 @@ chapters:
       - >- 
         I'll be sharing code in the following form and refer to these forms as 
         "files" that live in a "repository":
-      - file: <The File Name>; 
+      - name: <The File Name>; 
         repository: <The Repository Name>;
         lines:
           code:
@@ -65,7 +65,7 @@ chapters:
       A hello world program in Lean is very simple to write. Since that's the 
       case, I'll also showcase some file structure, string interpolation, and 
       comments in lean.
-    - file: HelloWorld/Basic.lean;
+    - name: HelloWorld/Basic.lean;
       repository: HelloWorld;
       lines:
         code: 
@@ -77,12 +77,12 @@ chapters:
           - /-
           - >-
             def hello : String := "world"
-    - file: HelloWorld.lean;
+    - name: HelloWorld.lean;
       repository: HelloWorld;
       lines:
         code: 
           - import HelloWorld.Basic 
-    - file: Main.lean;
+    - name: Main.lean;
       repository: HelloWorld;
       lines:
         code: 
