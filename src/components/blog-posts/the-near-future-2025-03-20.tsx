@@ -2,8 +2,11 @@ import React from "react";
 
 import Link from "next/link";
 
-export function TheNearFuture20250320({ content }) {
-  const { paragraphs, title } = content;
+import { IContent } from "@/interfaces/content";
+
+export function TheNearFuture20250320({ content }: { content: IContent }) {
+  const { chapters, title } = content;
+  const { paragraphs } = chapters[0];
   return (
     <>
       <h1>{title}</h1>

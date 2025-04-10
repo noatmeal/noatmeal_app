@@ -60,7 +60,7 @@ chapters:
           output: 
             - <Output from the code>
   - title: Hello, World!
-  - paragraphs: 
+    paragraphs: 
     - >-
       A hello world program in Lean is very simple to write. Since that's the 
       case, I'll also showcase some file structure, string interpolation, and 
