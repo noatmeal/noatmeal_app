@@ -15,8 +15,8 @@ interface IParagraph {
   sections: (string & ISection)[];
 }
 
-interface IFile {
-  file: string;
+export interface IFile {
+  name: string;
   repository: string;
   lines: {
     code: string[];

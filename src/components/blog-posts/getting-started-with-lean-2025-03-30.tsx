@@ -1,13 +1,6 @@
 import React from "react";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { File } from "@/components/file";
 import { IContent } from "@/interfaces/content";
 
 import Link from "next/link";
@@ -79,21 +72,7 @@ export function GettingStartedWithLean20250330({
 
       <p>{chapters[1].paragraphs[0]}</p>
 
-      <Card className="mx-auto w-fit">
-        <CardHeader>
-          <CardTitle>{chapters[1].paragraphs[1].file}</CardTitle>
-          <CardDescription>
-            {chapters[1].paragraphs[1].repository}
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div>{chapters[1].paragraphs[1].lines.code[0]}</div>
-          <div>{chapters[1].paragraphs[1].lines.code[1]}</div>
-        </CardContent>
-        <CardFooter className="border-t">
-          {chapters[1].paragraphs[1].lines.output?.[0]}
-        </CardFooter>
-      </Card>
+      <File file={chapters[1].paragraphs[1]} />
 
       <div className="m-4" />
 
@@ -102,56 +81,11 @@ export function GettingStartedWithLean20250330({
       <p>{chapters[2].paragraphs[0]}</p>
 
       <div className="flex flex-wrap gap-4 justify-center">
-        <Card className="w-fit">
-          <CardHeader>
-            <CardTitle>{chapters[2].paragraphs[1].file}</CardTitle>
-            <CardDescription>
-              {chapters[2].paragraphs[1].repository}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            {chapters[2].paragraphs[1].lines.code.map((line, index) => (
-              <div key={index}>{line}</div>
-            ))}
-          </CardContent>
-        </Card>
-        <Card className="w-fit">
-          <CardHeader>
-            <CardTitle>{chapters[2].paragraphs[2].file}</CardTitle>
-            <CardDescription>
-              {chapters[2].paragraphs[2].repository}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            {chapters[2].paragraphs[2].lines.code.map((line, index) => (
-              <div key={index}>{line}</div>
-            ))}
-          </CardContent>
-        </Card>
+        <File file={chapters[2].paragraphs[1]} />
+        <File file={chapters[2].paragraphs[2]} />
       </div>
       <div className="m-4" />
-      <Card className="mx-auto w-fit">
-        <CardHeader>
-          <CardTitle>{chapters[2].paragraphs[3].file}</CardTitle>
-          <CardDescription>
-            {chapters[2].paragraphs[3].repository}
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          {chapters[2].paragraphs[3].lines.code.map((line, index) => {
-            if (line !== " ") {
-              return <div key={index}>{line}</div>;
-            } else {
-              return <br key={index} />;
-            }
-          })}
-        </CardContent>
-        <CardFooter className="border-t">
-          {chapters[2].paragraphs[3].lines.output?.map((line, index) => (
-            <div key={index}>{line}</div>
-          ))}
-        </CardFooter>
-      </Card>
+      <File file={chapters[2].paragraphs[3]} />
       <div className="m-4" />
       <p>{chapters[2].paragraphs[4]}</p>
     </>
