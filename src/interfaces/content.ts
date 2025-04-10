@@ -24,11 +24,9 @@ interface IFile {
   };
 }
 
-type Paragraph = string & IParagraph & IFile;
-
 interface IChapter {
   title?: string;
-  paragraphs: Paragraph[];
+  paragraphs: (string & IParagraph & IFile)[];
 }
 
 export interface IContent {
