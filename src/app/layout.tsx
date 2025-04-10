@@ -12,7 +12,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <title>A Bowl of Noatmeal</title>
-        <meta name="A Bowl of Noatmeal" content="My blog" />
+        <meta
+          name="description"
+          content="A personal blog for an author named noatmeal"
+        />
       </head>
       <body className="min-h-screen">
         <div className="mx-auto max-w-[80ch] px-4 py-8">

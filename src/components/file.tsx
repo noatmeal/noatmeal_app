@@ -11,7 +11,7 @@ import {
 
 export function File({ file }: { file: IFile }) {
   return (
-    <Card className="mx-auto w-fit">
+    <Card aria-label="A code file" className="mx-auto w-fit">
       <CardHeader>
         <CardTitle>{file.name}</CardTitle>
         <CardDescription>{file.repository}</CardDescription>
